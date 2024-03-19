@@ -28,6 +28,13 @@
     <link rel="icon" type="image/x-icon" href="images/Ninja round.png" />
     <!-- Style.css -->
     <link rel="stylesheet" href="Style.css" />
+
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"
+    ></script>
+
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -51,7 +58,7 @@
             <p class="d-flex m-0 ms-1">NinjaQR</p>
           </a>
           <button
-            class="navbar-toggler p-0 border-0"
+            class="navbar-toggler p-0 border-0 shadow-none"
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#navbarsExampleDefault"
@@ -64,7 +71,7 @@
             <div class="offcanvas-header justify-content-end">
               <button
                 type="button"
-                class="btn-close text-reset"
+                class="btn-close text-reset shadow-none"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
               ></button>
@@ -147,7 +154,7 @@
     <main>
       <div class="container mt-5 pt-5">
         <div class="row mb-5">
-          <div class="col-lg-12">
+          <div class="col-lg-12 my-5">
             <h1
               class="display-2 text-center mb-3"
               style="font-weight: 600; letter-spacing: 2px"
@@ -230,6 +237,7 @@
                   ></i
                 ></a>
               </div>
+              <!-- Input Data For Making QR -->
               <div class="mx-4 mt-5">
                 <form action="" method="post"></form>
                 <div class="mb-3">
@@ -238,7 +246,7 @@
                     type="text"
                     class="form-control w-100 shadow-none"
                     name=""
-                    id=""
+                    id="url"
                     aria-describedby="helpId"
                     placeholder="https://www.ninja-qr-code.com"
                   />
@@ -250,7 +258,7 @@
                   <input
                     type="color"
                     class="form-control form-control-color w-100 shadow-none border-0"
-                    id="exampleColorInput"
+                    id="colorInput"
                     value="#8c52ff"
                     title="Choose your color"
                   />
@@ -264,9 +272,9 @@
                     <label for="" class="form-label">Choose Logo</label>
                     <input
                       type="file"
-                      class="form-control"
+                      class="form-control shadow-none"
                       name="image"
-                      id=""
+                      id="image"
                       placeholder=""
                       aria-describedby="fileHelpId"
                     />
@@ -279,7 +287,7 @@
                         <button
                           class="btn btn-white dropdown-toggle border-secondary w-100"
                           type="button"
-                          id="triggerId"
+                          id="eyeStyleDropdown"
                           data-bs-toggle="dropdown"
                           aria-haspopup="true"
                           aria-expanded="false"
@@ -287,16 +295,45 @@
                         >
                           Select Eye Style
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="triggerId">
-                          <button class="dropdown-item" href="#">Action</button>
-                          <button class="dropdown-item" href="#">
-                            Disabled action
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="eyeStyleDropdown"
+                        >
+                          <button class="dropdown-item" value="dot">
+                            Default
+                          </button>
+                          <button class="dropdown-item" value="circle">
+                            Cross
+                          </button>
+                          <button class="dropdown-item" value="star">
+                            Star
+                          </button>
+                          <button class="dropdown-item" value="heart">
+                            Heart
+                          </button>
+                          <button class="dropdown-item" value="triangle">
+                            Triangle
+                          </button>
+                          <button class="dropdown-item" value="dot">
+                            Pentagon
+                          </button>
+                          <button class="dropdown-item" value="dot">
+                            Hexagon
+                          </button>
+                          <button class="dropdown-item" value="dot">
+                            Octagon
+                          </button>
+                          <button class="dropdown-item" value="dot">
+                            Arrow
+                          </button>
+                          <button class="dropdown-item" value="dot">
+                            Spiral
                           </button>
                         </div>
                       </div>
                     </div>
                     <div class="col col-lg-6 col-sm-12 p-1 py-0">
-                      <div class="dropdown open mb-3 w-100">
+                      <div id="dotStyle" class="dropdown open mb-3 w-100">
                         <button
                           class="btn btn-white dropdown-toggle border-secondary w-100"
                           type="button"
@@ -306,12 +343,32 @@
                           aria-expanded="false"
                           style="background-color: #fff"
                         >
-                          Select Module Style
+                          Select Dot Style
                         </button>
                         <div class="dropdown-menu" aria-labelledby="triggerId">
-                          <button class="dropdown-item" href="#">Action</button>
-                          <button class="dropdown-item" href="#">
-                            Disabled action
+                          <button class="dropdown-item" data-type="dots">
+                            Dots
+                          </button>
+                          <button class="dropdown-item" data-type="square">
+                            Square
+                          </button>
+                          <button class="dropdown-item" data-type="rounded">
+                            Rounded
+                          </button>
+                          <button
+                            class="dropdown-item"
+                            data-type="extra-rounded"
+                          >
+                            Extra Rounded
+                          </button>
+                          <button class="dropdown-item" data-type="classy">
+                            Classy
+                          </button>
+                          <button
+                            class="dropdown-item"
+                            data-type="classy-rounded"
+                          >
+                            Classy Rounded
                           </button>
                         </div>
                       </div>
@@ -324,30 +381,26 @@
               class="col col-sm-12 col-lg-4 rounded-end p-2 pb-5"
               style="background-color: #ffffff; height: 500px"
             >
-              <img
-                src="images/qr-code.png"
-                class="img-fluid rounded-top"
-                alt=""
-              />
+              <!-- QR Code -->
+              <div
+                style="height: 300px"
+                id="canvas"
+                class="rounded d-flex justify-content-center align-items-center"
+              ></div>
+              <div class="text-center m-1"></div>
+              <!--  -->
               <div class="container">
                 <label for="customRange2" class="form-label">Size</label>
                 <input
                   type="range"
+                  id="size"
                   class="form-range shadow-none"
                   min="0"
-                  max="50"
+                  max="30"
                   id="customRange2"
                 />
               </div>
               <div class="d-flex container my-3">
-                <a
-                  name=""
-                  id=""
-                  class="btn nav-link-txt w-100 me-1"
-                  href="#"
-                  role="button"
-                  >Create</a
-                >
                 <a
                   name=""
                   id=""
