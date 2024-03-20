@@ -238,10 +238,10 @@
                 ></a>
               </div>
               <!-- Input Data For Making QR -->
-              <div class="mx-4 mt-5">
+              <div class="mx-4 mt-4">
                 <form action="" method="post"></form>
                 <div class="mb-3">
-                  <label for="" class="form-label">URL</label>
+                  <label for="" class="form-label ms-2 m-0">URL</label>
                   <input
                     type="text"
                     class="form-control w-100 shadow-none"
@@ -249,89 +249,71 @@
                     id="url"
                     aria-describedby="helpId"
                     placeholder="https://www.ninja-qr-code.com"
+                    title="Enter link to generate QR"
                   />
                 </div>
-                <label for="exampleColorInput" class="form-label"
-                  >Choose Color</label
-                >
-                <div class="mb-3">
-                  <input
-                    type="color"
-                    class="form-control form-control-color w-100 shadow-none border-0"
-                    id="colorInput"
-                    value="#8c52ff"
-                    title="Choose your color"
-                  />
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col col-lg-6 col-sm-12 p-1 py-0">
+                    <label for="exampleColorInput" class="form-label ms-2 m-0"
+                      >QR Color</label
+                    >
+                    <div class="mb-3">
+                      <input
+                        type="color"
+                        class="form-control form-control-color w-100 shadow-none border-0"
+                        id="colorInput"
+                        value="#8c52ff"
+                        title="choose your QR color"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-lg-6 col-sm-12 p-1 py-0">
+                    <label for="exampleColorInput" class="form-label ms-2 m-0"
+                      >Background Color</label
+                    >
+                    <div class="mb-3">
+                      <input
+                        type="color"
+                        class="form-control form-control-color w-100 shadow-none border-0"
+                        id="bgColor"
+                        value="#8c52ff"
+                        title="choose background color"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="mb-3">
-                  <form
-                    action="file.php"
-                    method="post"
-                    enctype="multipart/form-data"
-                  >
-                    <label for="" class="form-label">Choose Logo</label>
-                    <input
-                      type="file"
-                      class="form-control shadow-none"
-                      name="image"
-                      id="image"
-                      placeholder=""
-                      aria-describedby="fileHelpId"
-                    />
-                  </form>
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col col-lg-9 col-sm-12 p-1 py-0">
+                    <div class="mb-3">
+                      <form
+                        action="file.php"
+                        method="post"
+                        enctype="multipart/form-data"
+                      >
+                        <label for="" class="form-label">Choose Logo</label>
+                        <input
+                          type="file"
+                          class="form-control shadow-none"
+                          name="image"
+                          id="image"
+                          placeholder=""
+                          aria-describedby="fileHelpId"
+                        />
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col col-lg-3 col-sm-12 p-1 py-0 mt-4">
+                    <button
+                      id="deleteLogo"
+                      class="btn ms-1"
+                      title="Delete Logo"
+                    >
+                      Remove Logo
+                    </button>
+                  </div>
                 </div>
                 <div class="d-flex w-100 ms-2">
                   <div class="row w-100">
-                    <div class="col col-lg-6 col-sm-12 p-1 py-0">
-                      <div class="dropdown open mb-3 w-100 me-1">
-                        <button
-                          class="btn btn-white dropdown-toggle border-secondary w-100"
-                          type="button"
-                          id="eyeStyleDropdown"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          style="background-color: #fff"
-                        >
-                          Select Eye Style
-                        </button>
-                        <div
-                          class="dropdown-menu"
-                          aria-labelledby="eyeStyleDropdown"
-                        >
-                          <button class="dropdown-item" value="dot">
-                            Default
-                          </button>
-                          <button class="dropdown-item" value="circle">
-                            Cross
-                          </button>
-                          <button class="dropdown-item" value="star">
-                            Star
-                          </button>
-                          <button class="dropdown-item" value="heart">
-                            Heart
-                          </button>
-                          <button class="dropdown-item" value="triangle">
-                            Triangle
-                          </button>
-                          <button class="dropdown-item" value="dot">
-                            Pentagon
-                          </button>
-                          <button class="dropdown-item" value="dot">
-                            Hexagon
-                          </button>
-                          <button class="dropdown-item" value="dot">
-                            Octagon
-                          </button>
-                          <button class="dropdown-item" value="dot">
-                            Arrow
-                          </button>
-                          <button class="dropdown-item" value="dot">
-                            Spiral
-                          </button>
-                        </div>
-                      </div>
-                    </div>
                     <div class="col col-lg-6 col-sm-12 p-1 py-0">
                       <div id="dotStyle" class="dropdown open mb-3 w-100">
                         <button
@@ -372,6 +354,72 @@
                           </button>
                         </div>
                       </div>
+                    </div>
+                    <div class="col col-lg-6 col-sm-12 p-1 py-0">
+                      <div id="eyeStyle" class="dropdown open mb-3 w-100 me-1">
+                        <button
+                          class="btn btn-white dropdown-toggle border-secondary w-100"
+                          type="button"
+                          id="eyeStyleDropdown"
+                          data-bs-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                          style="background-color: #fff"
+                        >
+                          Select Eye Style
+                        </button>
+                        <div
+                          class="dropdown-menu"
+                          aria-labelledby="eyeStyleDropdown"
+                        >
+                          <button class="dropdown-item" data-type="">
+                            Default
+                          </button>
+                          <button class="dropdown-item" data-type="square">
+                            Square
+                          </button>
+                          <button class="dropdown-item" data-type="rounded">
+                            Rounded
+                          </button>
+                          <button
+                            class="dropdown-item"
+                            data-type="extra-rounded"
+                          >
+                            Extra-rounded
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col col-lg-6 col-sm-12 p-1 py-0">
+                    <label for="exampleColorInput" class="form-label ms-2 m-0"
+                      >Eye Dot Color</label
+                    >
+                    <div class="mb-3">
+                      <input
+                        type="color"
+                        class="form-control form-control-color w-100 shadow-none border-0"
+                        id="eyeDotColor"
+                        value="#8c52ff"
+                        title="choose corner dot color"
+                      />
+                    </div>
+                  </div>
+                  <div class="col col-lg-6 col-sm-12 p-1 py-0">
+                    <label for="exampleColorInput" class="form-label ms-2 m-0"
+                      >Eye Body Color</label
+                    >
+                    <div class="mb-3">
+                      <input
+                        type="color"
+                        class="form-control form-control-color w-100 shadow-none border-0"
+                        id="eyeColor"
+                        value="#8c52ff"
+                        title="choose corner body color"
+                      />
                     </div>
                   </div>
                 </div>

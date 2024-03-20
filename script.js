@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const eyeStyle = document.getElementById("eyeStyle");
   const dotStyle = document.getElementById("dotStyle");
   const size = document.getElementById("size");
+  const eyeColor = document.getElementById("eyeColor");
+  const bgColor = document.getElementById("bgColor");
+  const eyeDotColor = document.getElementById("eyeDotColor");
+  const deleteLogo = document.getElementById("deleteLogo");
 
   let op = {
     width: 300,
@@ -15,10 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
     dotsOptions: {
       color: "#8c52ff",
       type: "rounded",
+      //   gradient: ,
     },
-    eyeOptions: {
-      shape: "circle",
-      color: "#000000",
+    cornersSquareOptions: {
+      color: "#8c52ff",
+      type: "", //dot, square, extra-rounded
+    },
+    cornersDotOptions: {
+      color: "#8c52ff",
+      //type: "dot",
+    },
+    downloadOptions: {
+      name: "qr",
+      extension: "png", // 'png' 'jpeg' 'webp' 'svg'
     },
     backgroundOptions: {
       color: "#e9ebee",
@@ -26,6 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
     imageOptions: {
       crossOrigin: "anonymous",
       margin: 2,
+      //   imageSize: 0.4,
+    },
+    qrOptions: {
+      errorCorrectionLevel: "M",
     },
   };
 
@@ -57,6 +74,39 @@ document.addEventListener("DOMContentLoaded", function () {
     render();
   });
 
+  bgColor.addEventListener("input", (e) => {
+    op.backgroundOptions = { color: e.target.value };
+    render();
+  });
+
+  eyeColor.addEventListener("input", (e) => {
+    op.cornersSquareOptions = { color: e.target.value };
+    render();
+  });
+
+  eyeDotColor.addEventListener("input", (e) => {
+    op.cornersDotOptions = { color: e.target.value };
+    render();
+  });
+
+  deleteLogo.addEventListener("click", (e) => {
+    delete op.image;
+    render();
+  });
+
+  const imageInput = document.getElementById("image");
+  imageInput.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        op.image = event.target.result;
+        render();
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
   const dotStyleItems = document.querySelectorAll("#dotStyle .dropdown-item");
   dotStyleItems.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -67,14 +117,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  eyeStyleDropdown.addEventListener("change", (e) => {
-    const selectedEyeStyle = e.target.value;
-    if (selectedEyeStyle) {
-      op.eyeOptions = { shape: selectedEyeStyle };
-      render();
-    }
+  const eyeStyleItems = document.querySelectorAll("#eyeStyle .dropdown-item");
+  eyeStyleItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      const eyeType = e.target.dataset.type;
+      if (eyeType) {
+        op.cornersSquareOptions.type = eyeType;
+        render();
+      }
+    });
   });
 
-  //   end
+  //   end dotColor eyeColor
 });
