@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const bgColor = document.getElementById("bgColor");
   const eyeDotColor = document.getElementById("eyeDotColor");
   const deleteLogo = document.getElementById("deleteLogo");
+  const dnQR = document.getElementById("dnQR");
 
   let op = {
     width: 300,
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //type: "dot",
     },
     downloadOptions: {
-      name: "qr",
+      name: "",
       extension: "png", // 'png' 'jpeg' 'webp' 'svg'
     },
     backgroundOptions: {
@@ -92,6 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
   deleteLogo.addEventListener("click", (e) => {
     delete op.image;
     render();
+  });
+
+  dnQR.addEventListener("click", (e) => {
+    op.downloadOptions = { name: "NinjaQR", extension: "png" };
+    qrCode.download();
   });
 
   const imageInput = document.getElementById("image");
