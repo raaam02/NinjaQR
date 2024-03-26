@@ -83,3 +83,11 @@ footer {
 button.btn-primary:hover {
   background-color: #8c52ff;
 }
+
+.card {
+  background-color: #f1e9ff;
+  border: 1px solid #bfa0ff;
+}
+.card-title {
+  background-color: #d8c7f5;
+}
