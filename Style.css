@@ -85,8 +85,10 @@ button.btn-primary:hover {
 }
 
 .card {
+  height: 200px;
   background-color: #f1e9ff;
   border: 1px solid #bfa0ff;
+  box-shadow: 1px 1px 7px 1px #d8c7f5;
 }
 .card-title {
   background-color: #d8c7f5;
