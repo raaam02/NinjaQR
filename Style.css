@@ -74,12 +74,9 @@ footer {
   color: #bfa0ff;
 }
 
-.div-box-shadow {
-  box-shadow: -1px -1px 10px #ddc9ff, 1px 1px 10px #d8c7f5;
-  border-radius: 10%;
-  border: none;
+form-control {
+  border: 1px solid red;
 }
-
 button.btn-primary:hover {
   background-color: #8c52ff;
 }
