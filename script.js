@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //type: "dot",
     },
     downloadOptions: {
-      name: "",
+      name: "ninjaQR",
       extension: "png", // 'png' 'jpeg' 'webp' 'svg'
     },
     backgroundOptions: {

@@ -65,7 +65,7 @@
             <label for="" class="form-label">Id</label>
             <input
               type="text"
-              class="form-control"
+              class="form-control shadow-none"
               name="id"
               id=""
               aria-describedby="helpId"
@@ -79,7 +79,7 @@
               <label for="" class="form-label">Name</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control shadow-none"
                 name="name"
                 id=""
                 aria-describedby="helpId"
@@ -91,7 +91,7 @@
               <label for="" class="form-label">Email</label>
               <input
                 type="email"
-                class="form-control"
+                class="form-control shadow-none"
                 name="email"
                 id=""
                 aria-describedby="emailHelpId"
@@ -103,7 +103,7 @@
               <label for="" class="form-label">User Name</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control shadow-none"
                 name="uname"
                 id=""
                 aria-describedby="helpId"
@@ -115,7 +115,7 @@
               <label for="" class="form-label">Password</label>
               <input
                 type=""
-                class="form-control"
+                class="form-control shadow-none"
                 name="pass"
                 id=""
                 placeholder=""

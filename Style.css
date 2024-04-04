@@ -74,8 +74,11 @@ footer {
   color: #bfa0ff;
 }
 
-form-control {
-  border: 1px solid red;
+.form-control {
+  border: 1px solid #d8c7f5;
+}
+.form-control:focus {
+  border: 1px solid #8c52ff;
 }
 button.btn-primary:hover {
   background-color: #8c52ff;

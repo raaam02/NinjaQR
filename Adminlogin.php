@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="div-box-shadow form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control shadow-none"
                 name="uname"
                 id="formId1"
                 placeholder=""
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="div-box-shadow form-floating mb-3">
               <input
                 type="password"
-                class="form-control"
+                class="form-control shadow-none"
                 name="pass"
                 id="formId1"
                 placeholder=""
