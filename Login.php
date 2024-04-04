@@ -68,7 +68,7 @@ if (mysqli_num_rows($result)>0) {
     header("location:Home.html");
 }
 else {
-    echo " <small style='color:red;'> invalid Credential please try again</small>";
+    echo " <small style='color:red;'> Invalid credential please try again</small>";
 }
 
 mysqli_close($conn);
@@ -78,7 +78,7 @@ mysqli_close($conn);
             <div class="div-box-shadow form-floating mb-3">
               <input
                 type="text"
-                class="form-control"
+                class="form-control shadow-none"
                 name="uname"
                 id="formId1"
                 placeholder=""
@@ -92,7 +92,7 @@ mysqli_close($conn);
             <div class="div-box-shadow form-floating mb-3">
               <input
                 type="password"
-                class="form-control"
+                class="form-control shadow-none"
                 name="pass"
                 id="formId1"
                 placeholder=""
