@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     downloadOptions: {
       name: "ninjaQR",
-      extension: "png", // 'png' 'jpeg' 'webp' 'svg'
+      extension: "svg", // 'png' 'jpeg' 'webp' 'svg'
     },
     backgroundOptions: {
       color: "#e9ebee",
