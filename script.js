@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
       //   imageSize: 0.4,
     },
     qrOptions: {
-      errorCorrectionLevel: "M",
+      errorCorrectionLevel: "H",
     },
   };
 
