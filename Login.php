@@ -40,7 +40,7 @@
         >
           <div class="container">
             <a
-              href="Home.html"
+              href="index.html"
               class="d-flex mb-3 link-body-emphasis text-decoration-none"
             >
               <img
@@ -65,7 +65,7 @@ $sql = "select * from user where username = '$uname' and password= '$pass'";
 $result = mysqli_query( $conn, $sql );
 
 if (mysqli_num_rows($result)>0) {
-    header("location:Home.html");
+    header("location:index.html");
 }
 else {
     echo " <small style='color:red;'> Invalid credential please try again</small>";
@@ -130,7 +130,7 @@ mysqli_close($conn);
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 border-top mx-0">
       <div class="col mb-3">
         <a
-          href="Home.html"
+          href="index.html"
           class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none mt-4 ms-1"
         >
           <img
@@ -169,27 +169,27 @@ mysqli_close($conn);
         <h5 class="h4 footer-section-heading">let's Create</h5>
         <ul class="nav flex-column mt-3">
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Craete QR Code for instagram</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Craete QR Code for youtube</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Craete QR Code for facebook</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Craete QR Code for Whatsapp</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Create QR Code for any links</a
             >
           </li>

@@ -74,7 +74,7 @@
                     <a
                       class="nav-link nav-link-txt active mx-2 py-1 m-1"
                       aria-current="page"
-                      href="Home.html"
+                      href="index.html"
                       >Home</a
                     >
                   </li>
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div class="d-flex m-auto me-3">
-              <a class="" href="Home.html">
+              <a class="" href="index.html">
             <img
               style="height: 42px"
               class="nav-logo ms-3"
@@ -129,7 +129,7 @@
           <a
             class="nav-link-txt mt-1"
             style="text-decoration: none"
-            href="Home.html"
+            href="index.html"
           >
             <p class="d-flex m-0 ms-1">NinjaQR</p>
           </a>
@@ -242,7 +242,7 @@ mysqli_close($conn);
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 border-top mx-0">
       <div class="col mb-3">
         <a
-          href="Home.html"
+          href="index.html"
           class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none mt-4 ms-1"
         >
           <img
@@ -285,27 +285,27 @@ mysqli_close($conn);
         <h5 class="h4 footer-section-heading">let's Create</h5>
         <ul class="nav flex-column mt-3">
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Create QR Code for instagram</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Create QR Code for youtube</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Create QR Code for facebook</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Create QR Code for Whatsapp</a
             >
           </li>
           <li class="nav-item mb-2">
-            <a href="Home.html" class="nav-link foot-link-txt p-0"
+            <a href="index.html" class="nav-link foot-link-txt p-0"
               >Create QR Code for any links</a
             >
           </li>
@@ -335,7 +335,7 @@ mysqli_close($conn);
           </p>
         </div>
         <div class="mt-3">
-          <a class="nav-link" href="Home.html" style="display: inline">
+          <a class="nav-link" href="index.html" style="display: inline">
             <i
               class="fa-brands fa-instagram fa-xl me-3"
               style="color: #e3d5ff"
