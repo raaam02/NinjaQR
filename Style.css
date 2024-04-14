@@ -93,3 +93,14 @@ button.btn-primary:hover {
 .card-title {
   background-color: #d8c7f5;
 }
+
+/* copyright-section */
+.copyright-section {
+  font-size: 1rem;
+  background-color: #321866;
+  color: #f1e9ff;
+  letter-spacing: 2px;
+}
+.copyright-section a {
+  color: #bfa0ff;
+}
