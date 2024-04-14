@@ -94,6 +94,12 @@ button.btn-primary:hover {
   background-color: #d8c7f5;
 }
 
+/*  Social Links */
+
+.social-links a i:hover {
+  transform: translateY(-3px);
+}
+
 /* copyright-section */
 .copyright-section {
   font-size: 1rem;

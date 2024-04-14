@@ -334,7 +334,7 @@ mysqli_close($conn);
             >
           </p>
         </div>
-        <div class="mt-3">
+        <div class="mt-3 social-links">
           <a
             class="nav-link"
             href="https://www.instagram.com/raaam.02/"
