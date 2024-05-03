@@ -137,13 +137,83 @@
       </nav>
     </header>
     <main>
-      <div class="d-flex justify-content-center mt-5" style="height: 500px">
+      <div class="d-flex justify-content-center mt-5">
         <!-- Your content goes here -->
+        <div
+          class="div-box-shadow container mx-auto m-5 p-5 rounded bg-white"
+          style="max-width: 500px"
+        >
+          <div class="container">
+            <a
+              href="index.html"
+              class="d-flex mb-3 link-body-emphasis text-decoration-none"
+            >
+              <img
+                style="height: 70px"
+                class="nav-logo mx-auto"
+                src="images/Ninja NO BG Sharp.png"
+                alt="Logo"
+              />
+            </a>
+            <h3 class="text-center mb-4">Contact Us</h3>
+          </div>
+          <form action="Registration.php" method="post">
+            <div class="div-box-shadow form-floating mb-3">
+              <input
+                type="text"
+                class="form-control shadow-none"
+                name="name"
+                id="formId1"
+                placeholder=""
+                required
+              />
+              <label for="formId1" class="floating-label-color"
+                >Your Name</label
+              >
+            </div>
+
+            <div class="div-box-shadow form-floating mb-3">
+              <input
+                type="text"
+                class="form-control shadow-none"
+                name="email"
+                id="formId1"
+                placeholder=""
+                required
+              />
+              <label for="formId1" class="floating-label-color"
+                >Your Email</label
+              >
+            </div>
+            <!--  -->
+            <div class="form-floating">
+              <textarea
+                class="form-control shadow-none"
+                placeholder="Leave a comment here"
+                id="floatingTextarea2"
+                style="height: 100px"
+              ></textarea>
+              <label for="floatingTextarea2" class="floating-label-color"
+                >Write Your Query</label
+              >
+            </div>
+
+            <div class="mt-5">
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                style="border-color: #d6c2ff"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
     <!-- Footer -->
     <footer
-      class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 border-top mx-0"
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-4 pt-5 border-top mx-0"
     >
       <div class="col mb-3">
         <a

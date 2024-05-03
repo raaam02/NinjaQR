@@ -239,7 +239,7 @@ mysqli_close($conn);
     </div>
     </main>
     <!-- Footer -->
-    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 py-5 border-top mx-0">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-4 pt-5 border-top mx-0">
       <div class="col mb-3">
         <a
           href="index.html"
