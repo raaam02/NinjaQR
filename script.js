@@ -134,5 +134,71 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  //   end dotColor eyeColor
+  //insta button
+  const insta = document.getElementById("insta");
+  insta.addEventListener("click", function () {
+    op.image = "images/insta.png";
+    op.imageOptions.margin = 12;
+    op.imageOptions.imageSize = 0.3;
+    op.dotsOptions.color = "#dd2a7b";
+    op.cornersSquareOptions.color = "#8134af";
+    op.cornersDotOptions.color = "#515bd4";
+
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => button.classList.remove("active"));
+    insta.classList.add("active");
+
+    render();
+  });
+
+  //All Link Button
+  const linkButton = document.getElementById("link");
+  linkButton.addEventListener("click", function () {
+    op.image = "images/Ninja NO BG Sharp.png";
+    op.imageOptions.margin = 2;
+    op.imageOptions.imageSize = 0.4;
+    op.dotsOptions.color = "#8c52ff";
+    op.cornersSquareOptions.color = "#8c52ff";
+    op.cornersDotOptions.color = "#8c52ff";
+
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => button.classList.remove("active"));
+    linkButton.classList.add("active");
+
+    render();
+  });
+
+  //facebook button
+  const facebook = document.getElementById("facebook");
+  facebook.addEventListener("click", function () {
+    op.image = "images/facebook.png";
+    op.imageOptions.margin = 12;
+    op.imageOptions.imageSize = 0.3;
+    op.dotsOptions.color = "#1877f2";
+    op.cornersSquareOptions.color = "#3b5998";
+    op.cornersDotOptions.color = "#adb9d3";
+
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => button.classList.remove("active"));
+    facebook.classList.add("active");
+
+    render();
+  });
+
+  //youtube button
+  const youtube = document.getElementById("youtube");
+  youtube.addEventListener("click", function () {
+    op.image = "images/youtube.png";
+    op.imageOptions.margin = 12;
+    op.imageOptions.imageSize = 0.3;
+    op.dotsOptions.color = "#ff4400";
+    op.cornersSquareOptions.color = "#282828";
+    op.cornersDotOptions.color = "#ff0000";
+
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => button.classList.remove("active"));
+    youtube.classList.add("active");
+
+    render();
+  });
 });
