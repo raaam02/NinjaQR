@@ -189,8 +189,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const youtube = document.getElementById("youtube");
   youtube.addEventListener("click", function () {
     op.image = "images/youtube.png";
-    op.imageOptions.margin = 12;
-    op.imageOptions.imageSize = 0.3;
+    op.imageOptions.margin = 1;
+    op.imageOptions.imageSize = 0.4;
     op.dotsOptions.color = "#ff4400";
     op.cornersSquareOptions.color = "#282828";
     op.cornersDotOptions.color = "#ff0000";
