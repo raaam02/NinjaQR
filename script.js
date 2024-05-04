@@ -201,4 +201,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     render();
   });
+
+  //twitter button
+  const twitter = document.getElementById("twitter");
+  twitter.addEventListener("click", function () {
+    op.image = "images/twitter.png";
+    op.imageOptions.margin = 10;
+    op.imageOptions.imageSize = 0.3;
+    op.dotsOptions.color = "#08a0e9";
+    op.cornersSquareOptions.color = "#0084b4";
+    op.cornersDotOptions.color = "#08a0e9";
+
+    const buttons = document.querySelectorAll(".btn");
+    buttons.forEach((button) => button.classList.remove("active"));
+    twitter.classList.add("active");
+
+    render();
+  });
 });
