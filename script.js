@@ -144,6 +144,11 @@ document.addEventListener("DOMContentLoaded", function () {
     op.cornersSquareOptions.color = "#8134af";
     op.cornersDotOptions.color = "#515bd4";
 
+    colorInput.value = "#dd2a7b";
+    eyeDotColor.value = "#515bd4";
+    eyeColor.value = "#8134af";
+    bgColor.value = "#e9ebee";
+
     const buttons = document.querySelectorAll(".btn");
     buttons.forEach((button) => button.classList.remove("active"));
     insta.classList.add("active");
@@ -160,6 +165,11 @@ document.addEventListener("DOMContentLoaded", function () {
     op.dotsOptions.color = "#8c52ff";
     op.cornersSquareOptions.color = "#8c52ff";
     op.cornersDotOptions.color = "#8c52ff";
+
+    colorInput.value = "#8c52ff";
+    eyeDotColor.value = "#8c52ff";
+    eyeColor.value = "#8c52ff";
+    bgColor.value = "#8c52ff";
 
     const buttons = document.querySelectorAll(".btn");
     buttons.forEach((button) => button.classList.remove("active"));
@@ -178,6 +188,11 @@ document.addEventListener("DOMContentLoaded", function () {
     op.cornersSquareOptions.color = "#3b5998";
     op.cornersDotOptions.color = "#adb9d3";
 
+    colorInput.value = "#1877f2";
+    eyeDotColor.value = "#adb9d3";
+    eyeColor.value = "#3b5998";
+    bgColor.value = "#e9ebee";
+
     const buttons = document.querySelectorAll(".btn");
     buttons.forEach((button) => button.classList.remove("active"));
     facebook.classList.add("active");
@@ -195,6 +210,11 @@ document.addEventListener("DOMContentLoaded", function () {
     op.cornersSquareOptions.color = "#282828";
     op.cornersDotOptions.color = "#ff0000";
 
+    colorInput.value = "#ff4400";
+    eyeDotColor.value = "#ff0000";
+    eyeColor.value = "#282828";
+    bgColor.value = "#e9ebee";
+
     const buttons = document.querySelectorAll(".btn");
     buttons.forEach((button) => button.classList.remove("active"));
     youtube.classList.add("active");
@@ -211,6 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
     op.dotsOptions.color = "#08a0e9";
     op.cornersSquareOptions.color = "#0084b4";
     op.cornersDotOptions.color = "#08a0e9";
+
+    colorInput.value = "#08a0e9";
+    eyeDotColor.value = "#08a0e9";
+    eyeColor.value = "#0084b4";
+    bgColor.value = "#e9ebee";
 
     const buttons = document.querySelectorAll(".btn");
     buttons.forEach((button) => button.classList.remove("active"));
