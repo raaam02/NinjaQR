@@ -26,8 +26,9 @@ nav {
 }
 
 .btn {
-  color: #8c52ff;
+  color: #5816da;
   background-color: #e3d5ff;
+  border: 1px solid #8c52ff;
 }
 .btn-txt {
   color: #8c52ff;
