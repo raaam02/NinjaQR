@@ -111,3 +111,12 @@ button.btn-primary:hover {
 .copyright-section a {
   color: #bfa0ff;
 }
+
+@media (min-width: 992px) {
+  .QR-input {
+    height: 500px;
+  }
+  .QR-output {
+    height: 500px;
+  }
+}
